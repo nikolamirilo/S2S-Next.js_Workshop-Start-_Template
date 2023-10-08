@@ -4,11 +4,18 @@ import { FaRegComment } from "react-icons/fa";
 import { FiSend } from "react-icons/fi";
 import { BiBookmark } from "react-icons/bi";
 import Image from "next/image";
+import { BsTrash3 } from "react-icons/bs";
 
 const Card: React.FC = () => {
   return (
     <div className="p-4">
-      <div className="bg-white border rounded-md max-w-md">
+      <div className="bg-white border rounded-md max-w-md relative">
+        <button
+          id="delete"
+          className="absolute right-2 p-2 rounded-full hover:bg-red-500 top-2"
+        >
+          <BsTrash3 size={25} className="hover:fill-white" />
+        </button>
         <div className="flex items-center px-4 py-3">
           <img
             className="h-8 w-8 rounded-full"
